@@ -1,0 +1,95 @@
+/*Comando para toda a página*/
+* {
+    margin: 0; /* Remover a margem */
+    padding: 0; /* Cria espaços internos */
+    box-sizing: border-box; /* Calcula largura e altura */
+    font-family: Roboto, sans-serif /* Fontes utilizadas */
+}
+
+/*Estilização do cabeçalho*/
+header {
+    background-color: #5f27cd; 
+    padding: 16px 0; /* Cria espaços internos/espaçamentos */
+    color: #fff; /* Cor da fonte */
+    display: flex; /* Cria contêiner flexiveis para seus filhos  */
+    border-bottom: 16px solid #341f97; /* Borda inferior */
+    justify-content: center; /* Usada em conteiner para controlar o alinhamento */
+    text-transform: uppercase; /* Deixar o texto em caixa alta */
+    font-style: italic;
+}
+
+/*Estilização do botão*/
+header button {
+    margin-left: 16px; /* Margem esquerda do botão */
+}
+
+/* Estilização do formulário */
+form {
+    background-color: #c8d6e5; 
+    padding: 24px 0; /* Espaçamento interno */
+    text-align: center; /* Alinhamento horizontal */
+    display: none; /*Para esconder o display do formulario*/
+}
+
+/* Estilização do H2 do form */
+form h2 {
+    margin-bottom: 16px; /* Margem inferior */
+}
+
+/* Estilização do campo inserir e botões */
+input, button {
+    padding: 8px;
+}
+
+/* Estilização dos botões */
+button {
+    background-color: #009432;
+    border: none; /* Remover bordas */
+    cursor: pointer; /* Gerar interatividade ao passar o mouse no botão */
+    font-weight: bold; /* Tipo de fonte negrito */
+    text-transform: uppercase; /* Texto em maiusculo */
+    color: #fff; /* Cor da fonte dos botões */
+}
+
+/* Personalizar apenas o botão cancelar. Preciso criar um ID */
+
+#botao-cancelar {
+    background-color: red;
+}
+
+ul { /*Regra para a lista*/
+    display: flex; /*Display flex para Cria contêiner flexiveis para seus filhos*/
+    flex-wrap: wrap; /*Quando chegar ao limite da tela criar nova linha*/
+}
+
+ul li {
+    max-width: 25%; /*Largura máxima dos itens*/
+    list-style: none; /*Remover bolinhas na imagem geradas pelo li*/
+    position: relative; /*Para que o nome "Ver imagem em tam real no .overlay não fique longe das imagens*/
+    max-height: 280px; /*Limitar altura*/
+    overflow-y: hidden; 
+}
+ul li img {
+    width: 100%; /*Largura*/
+
+}
+
+.overlay-imagem-link {
+    padding: 16px; /*Espaçamento*/
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute; /*Centralizar o elemento no canto inferior*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /*Remover a opacidade do texto "Ver imagem em tam real"*/
+    transition: all ease .5s;
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none; /*Remover o underline*/
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1; /*Para o link "Ver imagem em tamanho real aparecer ao passar o mouse*/
+}
